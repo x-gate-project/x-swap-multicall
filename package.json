@@ -1,0 +1,28 @@
+{
+  "name": "@x-gate-project/x-swap-multicall",
+  "version": "0.0.1",
+  "main": "dist/typechain-types/index.js",
+  "types": "dist/typechain-types/index.d.ts",
+  "scripts": {
+    "test": "hardhat test",
+    "compile": "hardhat compile",
+    "typechain": "TS_NODE_TRANSPILE_ONLY=true hardhat typechain",
+    "clean": "hardhat clean && rimraf dist cache coverage coverage.json",
+    "build": "npm run clean & npm run compile && tsc",
+    "coverage": "hardhat coverage"
+  },
+  "files": [
+    "/contracts/**/*.sol",
+    "!/contracts/mocks/**/*",
+    "dist",
+    "artifacts"
+  ],
+  "keywords": [],
+  "description": "",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "dotenv": "^16.4.7",
+    "hardhat": "^2.22.18",
+    "rimraf": "^6.0.1"
+  }
+}
